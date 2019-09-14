@@ -36,6 +36,8 @@ class CreatePostsTable extends Migration
 
            $table->string('filter')->nullable();
 
+           $table->integer('person_like')->default(0);
+
            $table->text('description')->nullable();
 
            $table->integer('likes')->default(0);

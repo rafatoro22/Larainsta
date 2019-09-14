@@ -20,11 +20,18 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
 
 
-Route::get('/posts','PostsController@index');
+Route::get('/posts','PostsController@index')->name('listar');
 
 Route::get('/posts/create','PostsController@create');
 
 Route::post('/posts','PostsController@store');
 
+Route::get('/like/{id}','PostsController@like');
+
+Route::get('/deslike/{id}','PostsController@deslike');
+
+Route::get('/comment/{id}', 'CommentsController@comment');
 
 Route::resource('notifications', 'NotificationController');
+
+Route::get('/myAccount', 'UserController@index')->name('myAccount');

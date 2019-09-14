@@ -3,39 +3,90 @@
 
 @section('content')
 
-<div class="container">
 
-   <div class="row justify-content-center">
+<div class="login">
 
-       <div class="col-md-8">
+    <div class="row">
 
-           <h1>Novo POST</h1>
+        <div class="offset-md-4 col-md-4 border text-center p-5 bg-white">    
+        <div><center> <a class = "btn btn-primary" href="/posts">Voltar</a> </center></div>
 
-           <form method="POST" enctype="multipart/form-data" action="/posts">
 
-         
+            <h1 class="">Poste sua Foto</h1>
 
-               @csrf
+               
 
-               Descrição<textarea type="text" name="description"></textarea>
+            <form method="POST" enctype="multipart/form-data" action="/posts">
 
-         
 
-               Filter:<input type="text" name="filter">
+                @csrf
 
-         
 
-               Arquivo:<input type="file" name="image_path">
+                <div class="form-group row">                    
 
-         
 
-               <button type="submit">vai</button>
+                    <div class="col-md-12">
 
-           </form>
+                        <input placeholder="Nome da foto" id="filter" type="text" class="form-control" name="filter" >
 
-       </div>
 
-   </div>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group row">                    
+
+
+                    <div class="col-md-12">
+
+                        <textarea placeholder="description" id="description" type="text" class="form-control" name="description" required=""> </textarea>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group row">                    
+
+
+                    <div class="col-md-12">
+
+                        <input type="file" class="form-control" name="image_path">
+
+
+                    </div>
+
+                </div>
+                
+
+                <div class="form-group row mt-0">
+
+                    <div class="col-md-12">
+
+                        <button type="submit" class="btn btn-primary">
+
+                            Postar
+
+                        </button>
+
+
+                 
+
+                    </div>
+
+                </div>
+
+            </form>
+
+               
+
+           
+
+        </div>
+
+    </div>
+
+
 
 </div>
 

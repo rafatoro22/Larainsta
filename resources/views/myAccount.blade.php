@@ -1,3 +1,7 @@
+@foreach (posts as post)
+  @echo "{{$post->description}}"
+@endforeach
+
 @extends('layouts.app')
 
 
